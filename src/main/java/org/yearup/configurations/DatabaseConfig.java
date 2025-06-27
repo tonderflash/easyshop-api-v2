@@ -6,21 +6,21 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//@Configuration
+@Configuration
 public class DatabaseConfig
 {
     private BasicDataSource basicDataSource;
 
-    //@Bean
+    @Bean
     public BasicDataSource dataSource()
     {
         return basicDataSource;
     }
 
-    //@Autowired
-    public DatabaseConfig(@Value("${datasource.url}") String url,
-                          @Value("${datasource.username}") String username,
-                          @Value("${datasource.password}") String password)
+    @Autowired
+    public DatabaseConfig(@Value("${spring.datasource.url}") String url,
+                          @Value("${spring.datasource.username}") String username,
+                          @Value("${spring.datasource.password}") String password)
     {
         basicDataSource = new BasicDataSource();
         basicDataSource.setUrl(url);
