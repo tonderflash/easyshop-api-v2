@@ -66,5 +66,6 @@ Fix getById endpoint to return proper 404 Not Found status
 - Add ResponseStatusException import to CategoriesController
 - Now properly returns 404 Not Found when attempting to get deleted/non-existent categories
 - This matches Postman test expectation: "Get new category after delete should not be found"
+- COMMIT: 89771fa - "Fix getById endpoint to return 404 Not Found for non-existent categories"
 
 notes: Proper HTTP status code handling essential for RESTful API - null returns should be converted to appropriate error codes
