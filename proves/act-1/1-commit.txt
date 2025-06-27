@@ -26,3 +26,10 @@ Complete MySqlCategoryDao implementation for Phase 1
 - All Category CRUD operations now complete for Phase 1 requirements
 
 notes: Phase 1 should be complete - all category endpoints should work in Postman
+
+Execute database setup script 
+- Run create_database.sql to populate database with test data
+- Database now has exactly 3 categories as expected by Postman tests
+- Electronics, Fashion, Home & Kitchen categories inserted successfully
+
+notes: Postman script expecting 3 categories should now pass
