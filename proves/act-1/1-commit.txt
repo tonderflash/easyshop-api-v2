@@ -1,0 +1,28 @@
+Fix CORS configuration and add REST annotations to CategoriesController
+- Add @RestController, @RequestMapping, @CrossOrigin annotations to CategoriesController
+- Add @Autowired constructor for dependency injection
+- Add proper HTTP method annotations (@GetMapping, @PostMapping, etc.)
+- Enable database configuration by uncommenting @Configuration and @Bean
+- Fix datasource property names to match application.properties
+- Add comprehensive CORS configuration in WebSecurityConfig
+- Verify CORS headers are properly returned with requests
+
+notes: still dont work any test on the postman: image attached @1 - a
+
+notes: some DAO returning null 
+
+Implement basic getAllCategories method in MySqlCategoryDao
+- Replace null return with actual database query  
+- Add SQL query to fetch all categories from database
+- Add proper exception handling
+
+notes: GET /categories now works but other category tests still fail
+
+Complete MySqlCategoryDao implementation for Phase 1
+- Implement getById method to retrieve category by ID from database
+- Implement create method to insert new categories with auto-generated keys  
+- Implement update method to modify existing categories
+- Implement delete method to remove categories from database
+- All Category CRUD operations now complete for Phase 1 requirements
+
+notes: Phase 1 should be complete - all category endpoints should work in Postman
